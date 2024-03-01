@@ -8,11 +8,11 @@ import (
 
 func main() {
 	cfg := mysql.Config{
-		User:                 "",
-		Passwd:               "",
-		Addr:                 "",
-		DBName:               "",
-		Net:                  "",
+		User:                 Envs.DBUser,
+		Passwd:               Envs.DBPassword,
+		Addr:                 Envs.DBAddress,
+		DBName:               Envs.DBName,
+		Net:                  "tcp",
 		AllowNativePasswords: true,
 		ParseTime:            true,
 	}
